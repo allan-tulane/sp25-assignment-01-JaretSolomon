@@ -12,6 +12,9 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
+
+    $2^{n+1} = 2 * $2^{n} and is just a constant multiple of 2^n C = 2
+
 .  
 .  
 .  
@@ -19,27 +22,39 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
 .  
-.  
+.  $2^{2^n} is not because C = n and 2^n > n
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
 .  
 .  
+  No, $n^{1.01} > O(\mathrm{log}^2 n)$ n\
+  polynomial functions grow faster than logarithmic functions
 .  
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
+
+.  yes since (\mathrm{log}^2n)$ < $n^{1.01} n\
+  we can always find a constant C such that C * \mathrm{log}^2 n$ < $n^{1.01}
 .  
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
+
+  No, $\sqrt{n} (sqrt function) grows much faster than (logarithmic function) O((\mathrm{log} n)^3)$
+
 .  
+. 
+
+. 
 .  
-.  
-.  
-  - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
+  - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$
+
+  yes since  $\sqrt{n} > (\mathrm{log} n)^3$ we can always find a Constant C such that C * (\mathrm{log}n^3)$ < $\sqrt{n} 
+
+  dasdad
 .  
 
 
@@ -61,6 +76,8 @@ $$
   - 2a. (6 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
 
   - 2b. (6 pts) What does this function do, in your own words?  
+
+  This function returns the sum of the two previous numbers unless the input is <= 1. This is a recursive implentation of the fibonacci sequence
 
 .  
 .  
@@ -92,6 +109,8 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3b. (4 pts) What is the Work and Span of this implementation?  
 
+  work W(n) and span S(n) is both O(n) because this loop can not be run in parallel efficiently.
+
 .  
 .  
 .  
@@ -107,6 +126,8 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
 .  
+
+
 .  
 .  
 .  
